@@ -20,7 +20,6 @@ export default defineWebSocketHandler({
     ptys.set(peer.id, ptyProcess);
 
     ptyProcess.onData((data) => {
-      console.log("PTY Process Data", data);
       peer.send(
         JSON.stringify({
           type: "data",
