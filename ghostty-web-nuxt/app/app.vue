@@ -20,8 +20,9 @@ onMounted(async () => {
     term.write("Connecting.... \r\n");
   }
   let protocol = window.location.protocol;
+  console.log(protocol);
   ws = new WebSocket(
-    `${protocol == "https" ? "wss" : "ws"}://${window.location.host}/_ws`,
+    `${protocol == "https:" ? "wss" : "ws"}://${window.location.host}/_ws`,
   );
 
   ws.onopen = (e) => {
