@@ -51,6 +51,9 @@ onMounted(async () => {
 </script>
 <template>
   <div>
+    <p>Simple web terminal implimntation using ghossty web</p>
+  </div>
+  <div>
     <NuxtRouteAnnouncer />
     <div ref="terminalRef" />
   </div>

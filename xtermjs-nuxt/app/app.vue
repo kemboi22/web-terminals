@@ -54,6 +54,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
+  <div>
+    <p>Simple Implimentation of terminal using XtermJS</p>
+  </div>
   <div class="terminal-wrapper">
     <div ref="terminalRef" class="terminal"></div>
   </div>
