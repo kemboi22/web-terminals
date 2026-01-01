@@ -17,7 +17,10 @@ onMounted(() => {
     term.write("Connecting...\r\n");
   }
 
-  ws = new WebSocket("ws://localhost:3000/_ws");
+  let protocol = window.location.protocol;
+  ws = new WebSocket(
+    `${protocol == "https" ? "wss" : "ws"}://${window.location.host}/_ws`,
+  );
 
   ws.onopen = () => {
     term.write("Connected\r\n");
